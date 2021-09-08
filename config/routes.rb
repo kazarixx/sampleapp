@@ -7,4 +7,7 @@ Rails.application.routes.draw do
     # .../todolists/1 や .../todolists/3 に該当する
     # as: '名前' は「名前付きルート」
   get 'todolists/:id' => 'todolists#show', as: 'todolist'
+  get 'todolists/:id/edit' => 'todolists#edit', as: 'edit_todolist'
+  patch 'todolists/:id' => 'todolists#update', as: 'update_todolist'
+
 end
